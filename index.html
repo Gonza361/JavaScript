@@ -80,4 +80,131 @@ console.log(division);
 var remainder;
 remainder = 11 % 3;
 console.log(remainder);
+
+
+//Compound assigment with augmented addition, substraction, multiplication and division
+var a = 3;
+a += 12;
+console.log(a);
+a -= 12;
+console.log(a);
+a *= 12;
+console.log(a);
+a /= 12;
+console.log(a);
+
+//Declare string variables
+var firstName = "Gon";
+var lastName = "Gon2";
+
+//Escaping literal quotes in strings
+var myStr = "I am a \"double quoted\"string inside \"double quotes\"";
+console.log(myStr);
+
+//Quoting strings with single quotes
+var myStr = 'https:"//www.youtube.com/watch?v=PkZNo7MF"NFg';
+console.log(myStr);
+
+//Quoting strings with back ticks
+var myStr = `'https:"//www.youtube.com/watch?v=PkZNo7MF"NFg'`;
+console.log(myStr);
+
+//Escape sequences in strings
+var myStr = "FirstLine\n\t\\Secondline\nThirdline";
+console.log(myStr);
+
+//Concatenating strings with plus operator
+var ourStr = "I come first" + "I come second";
+console.log(ourStr);
+
+//Concatenating strings with plus equals operator
+var ourStr = "I come first";
+ourStr += "I come second";
+console.log(ourStr);
+
+//Constructing strings with variables
+var ourName = "I come first";
+var ourStr = "I come second" + ourName + "I come third";
+console.log(ourStr);
+
+//Appending variables to strings
+var primerVar = "Hello ";
+var segunVar = "you";
+primerVar += segunVar;
+console.log(primerVar);
+
+//Find lenght of string
+var firstNameLength = 0;
+var firstName = "Gon";
+firstNameLength = firstName.length;
+console.log(firstNameLength);
+
+//Bracket Notation to find first character in string
+var firstLetter = "";
+firstLetter = firstName[0];
+console.log(firstLetter);
+
+//String immutability, they cannot be altered once created.
+var firstName = "Gon";
+firstName[0] = "Y"; //This will give us an error
+firstName = "Yon"; //This will work
+
+//Bracket notation to find Nth character in string
+secondLetter = "";
+secondLetter = firstName[1];
+
+//Bracket notation to find last character in string
+lastLetter = "";
+lastLetter = firstName[firstName.length - 1];
+
+//Bracket notation to find Nth-to-last character in string
+lastLetter = "";
+lastLetter = firstName[firstName.length - 3];
+
+//Word blanks
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result = "";
+    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
+
+    return result;
+}
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+console.log(wordBlanks("bike", "slow", "flew", "slowly"));
+
+//Store multiple values with arrays
+var ourArray = ["Gon", 23];
+console.log(ourArray);
+
+//Nested arrays or multidimensional array
+var ourArray = [["The universe", 10], ["everything", 121]];
+console.log(ourArray);
+
+//Acces array data with indexes
+var ourArray = [50,60,70];
+var ourData = ourArray[0]; //Equals 50
+console.log(ourData);
+
+//Modify array data with indexes
+var ourArray = [50,60,70];
+ourArray[0] = 25;
+console.log(ourArray[0]);
+
+//Acces multi-dimensional arrays with indexes
+var ourArray = [["The universe", 10], ["everything", 121]];
+var ourData = ourArray[0] [0]; //Equals The universe
+console.log(ourData);
+
+//Manipulate arrays with push()
+var ourArray = [50,60,70];
+ourArray.push(["happy", "joy"],);
+console.log(ourArray);
+
+//Manipulate arrays with pop()
+var ourArray = [50,60,70];
+var removePop = ourArray.pop();
+console.log(ourArray);
+console.log(removePop);
+
+
+
 </script>
