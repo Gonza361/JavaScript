@@ -783,6 +783,210 @@ var myMusic = [
     }
 ];
 
+//Accessing nested objects 
+var myStorage = {
+    "car": {
+        "inside": {
+            "glove box": "maps",
+            "passenger seat": "crumbs"
+        },
+        "outside": {
+            "trunk": "jack"
+        }
+    }
+};
+var gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents);
+
+//Accessing nestedd arrays
+var myPlants = [
+    {
+        type: "flowers",
+        list: ["rose", "tulip", "dandelion"]
+    },
+    {
+        type: "trees",
+        list: ["fir", "pine", "birch"]
+    }
+];
+var secondTree = myPlants[1].list[1];
+console.log(secondTree);
+
+//Record collection
+var collection = {
+    "2548": {
+        "album": "Slippery when wet",
+        "artist": "Bon Jovi",
+        "tracks": ["Let it rock", "You give love a bad name"]
+    },
+    "2468": {
+        "album": "1999",
+        "artist": "Prince",
+        "tracks": ["1999", "Little red corvette"]
+    },
+    "1245": {
+        "artist": "Robert Palmer",
+        "tracks": []
+    },
+    "5439": {
+        "album": "ABBA Gold",
+    }
+};
+var collectionCopy = JSON.parse(JSON.stringify(collection)); //makes a copy of the object 
+
+function updateRecords(id, prop, value) {
+    if(value === "") {
+        delete collection[id][prop];
+    } else if(prop === "tracks") {
+        collection[id][prop] = collection[id][prop] || [];
+        collection[id][prop].push(value);
+    } else {
+        collection[id][prop] = value;
+    }
+    return collection;
+}
+console.log(updateRecords(5439, "artist", "ABBA"));
+console.log(updateRecords(2468, "tracks", "test"));
+
+//Iterate with while loops
+var myArray = [];
+var i = 0;
+while (i < 5) {
+    myArray.push(i);
+    i ++;
+}
+console.log(myArray);
+
+//Iterate with for loops
+var ourArray = [];
+for(var i = 0; i < 5; i ++) {
+    ourArray.push(i);
+}
+console.log(ourArray);
+
+var myArray = [];
+for(var i = 1; i < 6; i ++) {
+    myArray.push(i);
+}
+console.log(myArray);
+
+//Iterate for numbers with a for loop
+var ourArray = [];
+for(var i = 0; i < 10; i += 2) {
+    ourArray.push(i);
+}
+console.log(ourArray);
+
+var myArray = [];
+for(var i = 1; i < 10; i += 2) {
+    myArray.push(i);
+}
+console.log(myArray);
+
+//Count backwards with a for loop
+var ourArray = [];
+for(var i = 10; i > 0; i -= 2){
+    ourArray.push(i);
+}
+console.log(ourArray);
+
+var myArray = [];
+for(var i = 9; i > 0; i -= 2){
+    myArray.push(i);
+}
+console.log(myArray);
+
+//Iterate through an Array with a for loop
+var ourArr = [9, 10, 11, 12];
+var ourTotal = 0;
+for(var i = 0; i < ourArr.length; i++){
+    ourTotal += ourArr[i];
+}
+console.log(ourTotal);
+
+var myArr = [2, 3, 4, 5, 6];
+var total = 0;
+for(var i = 0; i < myArr.length; i ++) {
+    total += myArr[i];
+}
+console.log(total);
+
+//Nesting for loops
+function multiplyAll(arr) {
+    var product = 1;
+    for(var i = 0; i < arr.length; i ++) {
+        for(var j = 0; j < arr[i].length; j ++) {
+            product *= arr[i][j];
+        }
+    }
+    return product;
+}
+var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+console.log(product);
+
+//Iterate with do... while loops
+var myArray = [];
+var i = 10;
+do {myArray.push(i);
+    i ++;
+} while (i < 5)
+console.log(i, myArray);
+
+//Profile lookup
+var contacts = [
+    {
+        "firstName": "Akira",
+        "lastName": "Laine",
+        "number": "012345678",
+        "likes": ["Pizza", "Coding", "Brownie points"]
+
+    },
+    {
+        "firstName": "Harry",
+        "lastName": "Potter",
+        "number": "0999812716",
+        "likes": ["Howarts", "Magic", "Hagrid"]
+    },
+    {
+        "firstName": "Sherlock",
+        "lastName": "Holmes",
+        "number": "123475939",
+        "likes": ["Intriguin cases", "Violin"]
+    },
+    {
+        "firstName": "Cristian",
+        "lastName": "Boss",
+        "number": "unknown",
+        "likes": ["JavaScript", "Gaming","Foxes"]
+    }
+];
+function lookUpProfile(name, prop) {
+    for(var i = 0; i < contacts.length; i ++) {
+        if(contacts[i].firstName === name) {
+            return contacts[i][prop] || "No such property";
+        }
+    }
+    return "No such contact"
+}
+var data = lookUpProfile("Akira", "likes");
+console.log(data);
+
+//Generate random fractions
+function randomFraction() {
+    return Math.random();
+}
+console.log(randomFraction());
+
+//Generate random whole numbers
+var randomNumerBetween0and19 = Math.floor(Math.random() * 20);
+function randomeWholeNum() {
+    return Math.floor(Math.random() * 10);
+}
+console.log(randomeWholeNum());
+
+//Generate random whole numbers between a range
+
+
 
 
 </script>
