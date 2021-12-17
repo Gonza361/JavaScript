@@ -984,8 +984,58 @@ function randomeWholeNum() {
 }
 console.log(randomeWholeNum());
 
-//Generate random whole numbers between a range
+//Generate random whole numbers within a range
+function ourRandomRange(ourMin, ourMax) {
+    return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+ourRandomRange(1,9);
 
+function randomRange(myMin, myMax) {
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+    return 0;
+}
+var myRandom = randomRange(5,15);
+console.log(myRandom);
+
+//Use the parseInt function
+function convertToInteger(str) {
+    return parseInt(str);
+}
+console.log(convertToInteger("56"));
+
+//Use the parseInt function with a Radix
+function convertToInteger(str) {
+    return parseInt(str, 2); //default base 10
+}
+console.log(convertToInteger("10011"));
+
+//Use the conditional (ternary) operator
+function checkEqual(a, b) {
+    return a === b ? true : false;
+    /*if(a === b) {
+        return true;
+    } else {
+        return false;
+    }*/
+}
+console.log(checkEqual(1,2));
+
+//Use multiple conditional (ternary) operators
+function checkSing(num) {
+    return num > 0 ? "Positive" : num < 0 ? "Negative" : "zero";
+}
+console.log(checkSing(10));
+
+//Differences between the var and let keywords
+let catName = "Quincy";
+let quote;
+catName = "Beau";
+function catTalk() {
+    "use strict";
+    catName = "Oliver";
+    quote = catName + "says meow";
+}
+console.log(catTalk());
 
 
 
