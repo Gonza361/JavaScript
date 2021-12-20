@@ -1,4 +1,3 @@
-<script>
 console.log("Hello from JavaScript"); //in-line comment
 /*multi-line
 comment */
@@ -1327,6 +1326,3 @@ export const bar = "foo";
 //Import a default export
 /*import subtract from "math_functions";
 subtract(7, 4);*/
-
-
-</script>
